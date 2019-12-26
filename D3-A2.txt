@@ -1,0 +1,42 @@
+
+SQL> create sequence regno_seq
+  2  start with 110
+  3  increment by 2 maxvalue 200;
+
+Sequence created.
+
+SQL> insert into student values(
+  2  regno_seq.nextval,'deloitte',
+  3  'middle','last','laya@gmail.com');
+
+1 row created.
+
+SQL> insert into student values(
+  2  regno_seq.nextval,'infosys',
+  3  'prthu','murthy','siya@gmail.com');
+
+1 row created.
+
+SQL> select *from student;
+
+      REGD FNAME                MNAME                LNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+------------------------------
+       420 chatur               rama                 lingam
+crl@gmail.com
+
+       421 swami                vayu                 reddy
+svr@gmail.com
+
+       110 deloitte             middle               last
+laya@gmail.com
+
+
+      REGD FNAME                MNAME                LNAME
+---------- -------------------- -------------------- --------------------
+MAILID
+------------------------------
+       112 infosys              prthu                murthy
+siya@gmail.com
+
